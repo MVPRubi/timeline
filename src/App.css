@@ -1,0 +1,17 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-page {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

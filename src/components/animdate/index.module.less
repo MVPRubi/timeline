@@ -1,0 +1,64 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+
+  :global {
+    .word {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .letter {
+      display: inline-block;
+      position: relative;
+      float: left;
+      transform-origin: 50% 50% 20px;
+    }
+
+    .slot {
+      position: relative;
+      width: fit-content;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .letter.out {
+      transform: rotateX(90deg);
+      transition: transform;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    .letter.out-reverse {
+      transform: rotateX(-90deg);
+      transition: transform;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    .letter.behind {
+      transform: rotateX(-90deg);
+    }
+
+    .letter.in {
+      transform: rotateX(0deg);
+      transition: transform;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .letter.in-reverse {
+      transform-origin: 50% 100% 20px;
+      transform: rotateX(0deg);
+      transition: transform;
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .divide {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

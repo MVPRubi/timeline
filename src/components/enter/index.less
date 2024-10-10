@@ -1,0 +1,29 @@
+.enter {
+  --bg-light: #f9f9f9;
+  background-image: linear-gradient(
+    to bottom,
+    #4519a1 0%,
+    #a390cb 69%,
+    var(--bg-light) 100%
+  );
+
+  .swiper-slide {
+    box-shadow: none;
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 14px !important;
+    filter: blur(0.5px);
+    border-radius: 0;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.4) !important;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.airicon {
+  --airicon-blur: 0;
+  filter: blur(var(--airicon-blur));
+}

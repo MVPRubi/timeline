@@ -1,0 +1,26 @@
+.timeline {
+  background-color: #ffffff;
+  .title {
+    text-shadow: 6px 3px 20px #b8b8b8;
+  }
+  .shadow {
+    box-shadow: 6px 3px 20px #b8b8b8;
+  }
+
+  .specail-effect {
+    --effect-brightness: 0.7;
+    filter: brightness(var(--effect-brightness));
+    // opacity: 1;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(0, 22, 36, 0) 60%,
+        rgba(255, 184, 0, 0.5) 100%
+      ),
+      radial-gradient(
+        circle,
+        rgba(0, 22, 36, 0) 85%,
+        rgba(248, 46, 10, 0.222) 100%
+      );
+  }
+}
