@@ -18,7 +18,7 @@ jobs:
         run: echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
 
       - name: 登录到私人 Docker Registry
-        run: docker login <PRIVATE_REGISTRY_IP> -u zpw -p zpw123
+        run: docker login http://82.180.162.50:5000 -u zpw -p zpw123
 
       - name: 构建 Docker 镜像
         run: docker build . -f Dockerfile -t <PRIVATE_REGISTRY_IP>/timeline:${{ env.IMAGE_TAG }}
