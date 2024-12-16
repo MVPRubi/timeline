@@ -391,10 +391,13 @@ const Enter = () => {
               ref={progressRef}
               className="bg-white h-[1px] absolute bottom-[-6px] transition-all"
             />
+            <div className="text-white text-xs top-[40px] right-0 absolute opacity-70">
+              加载中 ...
+            </div>
           </div>
         ) : (
           <div className="relative" onClick={handleEnter}>
-            <div className="text-[22px] text-white">Time Line.</div>
+            <div className="text-[22px] text-white">Time Line 2.</div>
           </div>
         )}
         <img
